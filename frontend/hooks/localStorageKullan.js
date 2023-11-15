@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const useLocalStorage = (key, val) => {
+const useLocalStorage = (key, initialValue) => {
   const [localstorage, setLocalstorage] = useState(() => {
     const localValue = localStorage.getItem(key);
     console.log("LocalValue", localValue);
-    return JSON.parse(localValue);
+    return localValue ? JSON.parse(localValue) : initialValue;
   });
 
   //localstorage'un değeri localde eğer kayıtlı bilgi varsa o değeri alıyor.

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import useLocalStorage from "./localStorageKullan";
 
+const initialValue = "false";
+
 const useGeceModuAc = () => {
   const [value, setValue] = useState(localStorage.getItem("theme"));
-  const [theme, setTheme] = useLocalStorage("theme", value);
+  const [theme, setTheme] = useLocalStorage("theme", initialValue);
 
   //Burada localStorage'de kayıt ettiğimiz bilgiler  mevcutsa, o değeri value değerine atar
 
