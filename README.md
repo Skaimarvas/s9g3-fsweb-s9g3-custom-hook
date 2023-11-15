@@ -37,10 +37,12 @@ Bu projede kripto para izleme uygulamasını alacak ve 2 custom hook oluşturup,
 #### localStorageKullan hooku oluşturun
 
 - [x] `localStorageKullan.js` adında bir dosya oluşturun.
-- [ ] Bir key value ve baslangicDegeri alan bir hook oluşturun.
+- [x] Bir key value ve baslangicDegeri alan bir hook oluşturun.
 
 #### geceModuAc çevresinde localStorageKullan 'ı kullanın
 
-- [ ] geceModuAc hooku içine localStorageKullan'ı import edin.
-- [ ] localStorage'a kaydedilmiş değere göre UI'den switche tıklandığında gece modunu açıp kapatmayı ayarlayın.
-- [ ] App kapatılıp açıldığında gece modu daha önce aktif edildiyse uygulama gece modunda başlasın.
+- [x] geceModuAc hooku içine localStorageKullan'ı import edin.
+- [x] localStorage'a kaydedilmiş değere göre UI'den switche tıklandığında gece modunu açıp kapatmayı ayarlayın.
+- [x] App kapatılıp açıldığında gece modu daha önce aktif edildiyse uygulama gece modunda başlasın.
+
+localStorage: Javascript sitelerinin ve uygulamalarının anahtar/değer çiftlerini son kullanma tarihi olmadan bir web tarayıcısında kaydetmesine olanak tanıyan bir özelliktir. Bu, tarayıcıda saklanan verilerin tarayıcı penceresi kapatıldıktan sonra bile devam edeceği anlamına gelir.

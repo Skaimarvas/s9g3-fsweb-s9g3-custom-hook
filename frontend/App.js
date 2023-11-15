@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 import useGeceModuAc from "./hooks/geceModuAc";
@@ -10,6 +9,8 @@ const App = () => {
   const [geceModu, handleGeceModu] = useGeceModuAc("");
 
   //Gece Modu useState'i kaldırıp kendi yaptığımız useGeceModuAc hook'umuzu kullandık.
+
+  //handleGeceModu ile geceModu'nun değerini boolean değeri olarak ayarlıyoruz.
 
   useEffect(() => {
     axios
@@ -21,6 +22,7 @@ const App = () => {
   }, []);
   return (
     <div className={geceModu ? "dark-mode App" : "App"}>
+      {/* GeceModu true olduğunda dark-mode aktif oluyor*/}
       <Navbar geceModu={geceModu} setGeceModu={handleGeceModu} />
       <Charts coinData={coinData} />
     </div>

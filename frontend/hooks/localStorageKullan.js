@@ -7,6 +7,10 @@ const useLocalStorage = (key, val) => {
     return JSON.parse(localValue);
   });
 
+  //localstorage'un değeri localde eğer kayıtlı bilgi varsa o değeri alıyor.
+
+  //JSON.parse()=> JSON olarak alınan verileri parse etmek yani ayrıştırmak için kullanılır; bir JSON string'ini bir Javascript object haline getirir.
+
   const localeChange = (val) => {
     setLocalstorage(val);
     localStorage.setItem(key, JSON.stringify(val));
